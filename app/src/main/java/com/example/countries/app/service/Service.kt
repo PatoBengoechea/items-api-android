@@ -22,8 +22,8 @@ class Service {
         serviceCalls = retrofit.create(MethodService::class.java)
     }
 
-    suspend fun searchItems(): MELIResponse {
-        return serviceCalls.getSearchItems()
+    suspend fun searchItems(item: String): MELIResponse {
+        return serviceCalls.getSearchItems(item)
     }
 
     suspend fun getItem(itemId: String): Item {

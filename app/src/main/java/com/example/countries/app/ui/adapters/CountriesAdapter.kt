@@ -4,6 +4,8 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -13,6 +15,8 @@ import com.example.countries.app.ui.activities.DetailActivity
 import com.squareup.picasso.Picasso
 
 class CountriesAdapter(private val items: List<Item>): RecyclerView.Adapter<CountriesAdapter.ViewHolder>() {
+
+
 
 //startRegion
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
