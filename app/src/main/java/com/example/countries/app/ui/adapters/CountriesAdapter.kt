@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.countries.R
 import com.example.countries.app.service.Item
 import com.example.countries.app.ui.activities.DetailActivity
+import com.squareup.picasso.OkHttp3Downloader
 import com.squareup.picasso.Picasso
 
 class CountriesAdapter(private val items: List<Item>): RecyclerView.Adapter<CountriesAdapter.ViewHolder>() {
@@ -48,6 +49,8 @@ class CountriesAdapter(private val items: List<Item>): RecyclerView.Adapter<Coun
 
             Picasso.get()
                 .load(item.secure_thumbnail)
+                .fit()
+                .centerCrop()
                 .placeholder(R.drawable.ic_launcher_foreground)
                 .into(thumbnailImageView)
 

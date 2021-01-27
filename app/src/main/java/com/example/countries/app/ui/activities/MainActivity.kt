@@ -65,6 +65,7 @@ class MainActivity : AppCompatActivity() {
             override fun onEditorAction(v: TextView?, actionId: Int, event: KeyEvent?): Boolean {
                 if(actionId == EditorInfo.IME_ACTION_DONE){
                     getItems(textToSearch)
+                    itemEdtiText.clearFocus()
                     val inputManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
                     inputManager.hideSoftInputFromWindow(currentFocus?.windowToken, InputMethodManager.HIDE_NOT_ALWAYS)
                     return true;
